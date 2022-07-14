@@ -24,7 +24,7 @@ export default function Page(props: PageProps) {
       <div className={"page-header"}>
         <div>
           <h1 className={"page-title"}>{title}</h1>
-          <span className={"page-cate"}>{category}</span>
+          <div className={"page-cate"}>{category}</div>
         </div>
         <span className={"page-desc"}>{description}</span>
       </div>

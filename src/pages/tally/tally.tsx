@@ -1,6 +1,8 @@
 import React from "react";
 import Page from "@components/page";
+import Card from "@components/card";
 import Trend from "./trend";
+import Constituent from "./constituent";
 
 const data = [
   {
@@ -47,6 +49,21 @@ const data = [
   },
 ];
 
+const data2 = [
+  {
+    name: "理财",
+    value: 399,
+  },
+  {
+    name: "存款",
+    value: 899,
+  },
+  {
+    name: "基金",
+    value: 783,
+  }
+]
+
 export default function PageTally() {
   return (
     <Page
@@ -56,7 +73,12 @@ export default function PageTally() {
       description={"a tool to record my cash"}
       category={"tool"}
     >
-      <Trend data={data} />
+      <Card title={"财产构成"} type={"with-header"} style={{width: 500, height: 300}}>
+        <Constituent data={data2} />
+      </Card>
+      <Card title={"累计分析"} type={"with-header"} style={{width: 1000, height: 400}}>
+        <Trend data={data} />
+      </Card>
     </Page>
   );
 }
